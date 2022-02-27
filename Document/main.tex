@@ -1,0 +1,60 @@
+\documentclass[11pt,a4paper]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{bbold}
+\usepackage{tikz}
+
+\PassOptionsToPackage{hyphens}{url}\usepackage[hidelinks]{hyperref}
+
+\usepackage[toc,page]{appendix}
+
+\usepackage[style=numeric]{biblatex}
+\addbibresource{literature.bib}
+
+\graphicspath{{figures/}}
+
+\definecolor{nicered}{RGB}{208,2,27}
+\definecolor{nicegreen}{RGB}{65,117,5}
+\definecolor{niceblue}{RGB}{74,144,226}
+\definecolor{niceyellow}{RGB}{245,166,35}
+\newcommand{\red}[1]{\textcolor{nicered}{#1}}
+\newcommand{\green}[1]{\textcolor{nicegreen}{#1}}
+\newcommand{\blue}[1]{\textcolor{niceblue}{#1}}
+\newcommand{\yellow}[1]{\textcolor{niceyellow}{#1}}
+
+%% GLOBAL SETTINGS
+\renewcommand{\arraystretch}{1.5}
+
+%% MAKROS
+\newcommand{\unity}{\mathbb{1}}
+\newcommand{\dagg}[1]{{#1}^{\dagger}}
+\renewcommand{\tr}[1]{\mathrm{tr}\left[#1\right]}
+
+
+\title{Title}
+\subtitle{Subtitle}
+\author{Author \\ \texttt{email@adress.com}}
+\date{\today}
+
+%% END PREAMBLE
+\begin{document}
+  \maketitle
+  \setcounter{tocdepth}{2}
+  \tableofcontents
+
+\pagebreak
+  \input{content/sections/section1}
+
+\pagebreak
+  \printbibliography
+
+\pagebreak
+  \begin{appendices}
+    \input{content/appendices/appendix1}
+  \end{appendices}
+\end{document}
